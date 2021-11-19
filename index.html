@@ -9,17 +9,22 @@
     <tw-storydata name="QuickPhotoTour" startnode="4" creator="Twine" creator-version="2.3.13" ifid="F80F9F6B-B0A9-431F-89F2-A663B9FDEB53" zoom="1" format="reach" format-version="1.0.61" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">window.reach_resource_prefix = "https://uoftmadlab.github.io/QuickPhotoTour/"
 window.story.registerMixin("growing", {onMouseEnter: "grow", onMouseLeave: "shrink"});
 </script><tw-passagedata pid="1" name="Equipment" tags="" position="337,185" size="100,100">((#Equipment))
+[[%code%]]
 
-[[Corner]]
-[[Track]]
-</tw-passagedata><tw-passagedata pid="2" name="Corner" tags="" position="204,336" size="100,100">((#Corner))
+{&quot;backgroundColor&quot;:&quot;#ffffff&quot;, &quot;opacity&quot;:&quot;0.2&quot;, &quot;mixin&quot;:&quot;growing&quot;}[[Corner]]
+{&quot;backgroundColor&quot;:&quot;#ffffff&quot;, &quot;opacity&quot;:&quot;0.2&quot;, &quot;mixin&quot;:&quot;growing&quot;}[[Track]]
+</tw-passagedata><tw-passagedata pid="2" name="Corner" tags="" position="293,361" size="100,100">((#Corner))
+[[%code%]]
 
-[[Equipment]] </tw-passagedata><tw-passagedata pid="3" name="Track" tags="" position="214,10" size="100,100">((#Track))
-[[Equipment]] </tw-passagedata><tw-passagedata pid="4" name="Loading" tags="" position="514,188" size="100,100">
-
+{&quot;backgroundColor&quot;:&quot;#ffffff&quot;, &quot;opacity&quot;:&quot;0.2&quot;, &quot;mixin&quot;:&quot;growing&quot;}[[Equipment]] </tw-passagedata><tw-passagedata pid="3" name="Track" tags="" position="183,78" size="100,100">((#Track))
+[[%code%]]
+{&quot;backgroundColor&quot;:&quot;#ffffff&quot;, &quot;opacity&quot;:&quot;0.2&quot;, &quot;mixin&quot;:&quot;growing&quot;}[[Equipment]] </tw-passagedata><tw-passagedata pid="4" name="Loading" tags="" position="513,188" size="100,100">
+[[%code%]]
 &lt;%
 
 var panel = p.textPanel(&quot;Please wait while the scene is loading.&quot;, {mixin:&quot;growing&quot;});
+
+
 
 p.on(&quot;reach_imagePreLoaded&quot;, (e) =&gt; {
 
@@ -41,6 +46,13 @@ window.story.preloadImages({
 %&gt;
 
 
+</tw-passagedata><tw-passagedata pid="5" name="%code%" tags="" position="513,338" size="100,100">p.on(&quot;grow&quot;, (e) =&gt; {
+	e.setOption(&quot;scale&quot;, &quot;1.2 1.2 1.0&quot;);
+});
+
+p.on(&quot;shrink&quot;, (e) =&gt; {
+	e.setOption(&quot;scale&quot;, &quot;1.0 1.0 1.0&quot;);
+});
 </tw-passagedata></tw-storydata>
     <a-scene reach-load-local>
       <a-assets><img src="https://cdn.jsdelivr.net/gh/UofTMADLab/reach-dist/reachDefaultRoom.png" id="reach-default-360"/ crossorigin="anonymous"> </a-assets>
